@@ -10,40 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.agrur.agrur.MainActivity">
 
-    <RadioButton
-        android:text="La Franquette"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/2"
-        android:layout_toEndOf="@+id/2"
-        android:id="@+id/3" />
-
-    <RadioButton
-        android:text="La Mayette"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/1"
-        android:layout_below="@+id/titleVariete"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp" />
-
-    <RadioButton
-        android:text="La Parisienne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/2"
-        android:layout_alignBaseline="@+id/1"
-        android:layout_alignBottom="@+id/1"
-        android:layout_toEndOf="@+id/1" />
-
-    <Button
-        android:text="Valider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonValider"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/1" />
-
     <TextView
         android:text="Entrez la superficie du verger :"
         android:layout_width="wrap_content"
@@ -80,24 +46,6 @@
         android:layout_below="@+id/editHectare"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:text="Quel est le nom du producteur ?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/titleNomProducteur"
-        android:textAppearance="@android:style/TextAppearance.Large"
-        android:layout_marginTop="19dp"
-        android:layout_below="@+id/3"
-        android:layout_alignEnd="@+id/3" />
-
-    <ExpandableListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listProducteur"
-        android:layout_below="@+id/titleNomProducteur"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/buttonValider" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -105,16 +53,56 @@
         android:ems="10"
         android:id="@+id/editHectare"
         android:layout_below="@+id/titleHectare"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editSuperficie"
-        android:layout_below="@+id/titleSuperficie"
-        android:layout_alignStart="@+id/editHectare" />
+        android:layout_below="@+id/titleVariete"
+        android:layout_alignEnd="@+id/editHectare"
+        android:id="@+id/editVariete"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Dans quel commune se situe-t-il ?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editVariete"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/titleCommune"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <TextView
+        android:text="A quel producteur appartient-il ?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editCommune"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/titleNomProducteur"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/titleNomProducteur"
+        android:id="@+id/editNomProducteur"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editCommune"
+        android:layout_below="@+id/titleCommune"
+        android:layout_alignStart="@+id/editVariete"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -123,7 +111,26 @@
         android:ems="10"
         android:id="@+id/editNomVerger"
         android:layout_below="@+id/titleNomVerger"
-        android:layout_alignStart="@+id/editSuperficie" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editSuperficie"
+        android:layout_below="@+id/titleSuperficie"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonValider"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

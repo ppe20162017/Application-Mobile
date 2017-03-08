@@ -11,6 +11,127 @@
     tools:context="com.example.agrur.agrur.AgrurPPE">
 
 
+    <Button
+        android:id="@+id/buttonQuitterAjout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quitter"
+        android:layout_toEndOf="@+id/textViewAjoutVerger"
+        android:layout_alignTop="@+id/buttonAjoutVerger" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextProducteur"
+        android:layout_above="@+id/buttonQuitterAjout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextCommune"
+        android:layout_above="@+id/textViewProducteur"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextVariete"
+        android:layout_above="@+id/textViewCommune"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Entrez la variete cultivé :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewVariete"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_above="@+id/editTextVariete"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Dans quel commune est-il ?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCommune"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_above="@+id/editTextCommune"
+        android:layout_alignEnd="@+id/textViewHectare" />
+
+    <TextView
+        android:text="A quel producteur appartient-il ?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewProducteur"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_above="@+id/editTextProducteur"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextNomVerger"
+        android:layout_above="@+id/textViewSuperficie"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Entrez le nom du verger :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewNomVerger"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_above="@+id/editTextNomVerger"
+        android:layout_alignStart="@+id/textViewHectare" />
+
+    <Button
+        android:id="@+id/buttonAjoutVerger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textViewAjoutVerger" />
+
+    <TextView
+        android:text="Entrez le nombre d'hectare :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewHectare"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_above="@+id/editTextHectare"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_above="@+id/textViewHectare"
+        android:id="@+id/editTextSuperficie"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Entrez la superficie du verger :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSuperficie"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_above="@+id/editTextSuperficie"
+        android:layout_alignEnd="@+id/textViewProducteur" />
+
     <TextView
         android:id="@+id/textViewAjoutVerger"
         android:layout_width="wrap_content"
@@ -23,134 +144,13 @@
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:id="@+id/editTextNomVerger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_below="@+id/textViewNomVerger"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="Entrez la superficie du verger :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewSuperficie"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_below="@+id/editTextNomVerger"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:id="@+id/editTextSuperficie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_below="@+id/textViewSuperficie"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="Entrez le nom du verger :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewNomVerger"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/textViewAjoutVerger"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="Entrez le nombre d'hectare :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextSuperficie"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewHectare"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-    <EditText
         android:id="@+id/editTextHectare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName|numberDecimal"
-        android:layout_below="@+id/textViewHectare"
-        android:layout_alignStart="@+id/editTextSuperficie"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:id="@+id/buttonQuitterAjout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quitter"
-        android:layout_toEndOf="@+id/textViewAjoutVerger"
-        android:layout_alignTop="@+id/buttonAjoutVerger" />
-
-    <TextView
-        android:text="Entrez la variete cultivé :"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextHectare"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewVariete"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/textViewVariete"
-        android:id="@+id/editTextVariete"
+        android:layout_above="@+id/textViewVariete"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:text="Dans quel commune est-il ?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextVariete"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewCommune"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/textViewCommune"
-        android:id="@+id/editTextCommune"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="A quel producteur appartient-il ?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextCommune"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textViewProducteur"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/textViewProducteur"
-        android:id="@+id/editTextProducteur"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:id="@+id/buttonAjoutVerger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ajouter"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textViewAjoutVerger"
-        android:layout_marginBottom="16dp" />
 </RelativeLayout>

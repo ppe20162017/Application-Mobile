@@ -17,10 +17,10 @@
         </activity>
         <activity
             android:name=".AjoutVerger"
-            android:label="ajout_verger" />
+            android:label="Ajouter un verger" />
         <activity
             android:name=".ListeVerger"
-            android:label="list_verger" />
+            android:label="Liste des Vergers" />
 
     </application>
 

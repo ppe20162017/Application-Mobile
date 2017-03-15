@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         android:text="TextView" />
     <TextView
         android:id="@+id/sup"
@@ -32,29 +32,28 @@
         android:id="@+id/var"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
         android:layout_alignBaseline="@+id/hec"
         android:layout_alignBottom="@+id/hec"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/hec"
-        android:text="TextView" />
+        android:layout_toEndOf="@+id/hec" />
     <TextView
         android:id="@+id/com"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
         android:layout_alignBaseline="@+id/var"
         android:layout_alignBottom="@+id/var"
-        android:layout_marginRight="5dp"
-        android:layout_toLeftOf="@+id/pro"
-        android:text="TextView" />
+        android:layout_toEndOf="@+id/var" />
     <TextView
         android:id="@+id/pro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
         android:layout_alignBaseline="@+id/com"
         android:layout_alignBottom="@+id/com"
-        android:layout_alignParentRight="true"
-        android:text="TextView" />
-
-
+        android:layout_toEndOf="@+id/com" />
 
 </RelativeLayout>

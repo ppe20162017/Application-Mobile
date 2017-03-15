@@ -41,6 +41,7 @@ public class ListeVerger extends AppCompatActivity {
         // Assign adapter to ListView
         listViewVergers.setAdapter(dataAdapter);
         vergerBdd.close();
+        quitter();
 
     }
 

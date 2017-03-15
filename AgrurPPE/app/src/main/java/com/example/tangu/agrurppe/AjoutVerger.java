@@ -21,6 +21,7 @@ public class AjoutVerger extends AppCompatActivity {
     private Button buttonAjoutVerger, buttonQuitterAjout;
     private EditText editTextNomVerger, editTextSuperficie, editTextHectare, editTextVariete, editTextProducteur, editTextCommune;
     private String nomVerger, superficie, hectare, producteur, commune, variete;
+    private BdAdapter vergerBdd;
 
 
     @Override
@@ -52,29 +53,63 @@ public class AjoutVerger extends AppCompatActivity {
         buttonAjoutVerger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                editTextNomVerger = (EditText) findViewById(R.id.editTextNomVerger);
-                editTextSuperficie = (EditText) findViewById(R.id.editTextSuperficie);
-                editTextHectare = (EditText) findViewById(R.id.editTextHectare);
-                editTextCommune = (EditText) findViewById(R.id.editTextCommune);
-                editTextProducteur = (EditText) findViewById(R.id.editTextProducteur);
-                editTextVariete = (EditText) findViewById(R.id.editTextVariete);
-
-                nomVerger = editTextNomVerger.getText().toString();
-                superficie = editTextSuperficie.getText().toString();
-                hectare = editTextHectare.getText().toString();
-                variete = editTextVariete.getText().toString();
-                producteur = editTextProducteur.getText().toString();
-                commune = editTextCommune.getText().toString();
-
-                if (nomVerger.equals("") || superficie.equals("") || hectare.equals("")||variete.equals("") || producteur.equals("") || commune.equals("")){
+                if (getEditNomVerger().equals("") || getEditSuperficie().equals("") || getEditHectare().equals("")||getEditVariete().equals("")
+                        || getEditProducteur().equals("") || getEditCommune().equals("")){
                     Toast.makeText(getApplicationContext(), "Champ vide !", Toast.LENGTH_LONG).show();
                 }
 
                 else{
+                    testBd();
                     Toast.makeText(getApplicationContext(), "Ajout du verger !", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
+
+    public String getEditNomVerger(){
+        editTextNomVerger = (EditText) findViewById(R.id.editTextNomVerger);
+        nomVerger = editTextNomVerger.getText().toString();
+        return nomVerger;
+    }
+
+    public String getEditSuperficie(){
+        editTextSuperficie = (EditText) findViewById(R.id.editTextSuperficie);
+        superficie = editTextSuperficie.getText().toString();
+        return superficie;
+    }
+
+    public String getEditHectare(){
+        editTextHectare = (EditText) findViewById(R.id.editTextHectare);
+        hectare = editTextHectare.getText().toString();
+        return hectare;
+    }
+
+    public String getEditCommune(){
+        editTextCommune = (EditText) findViewById(R.id.editTextCommune);
+        commune = editTextCommune.getText().toString();
+        return commune;
+    }
+
+    public String getEditProducteur(){
+        editTextProducteur = (EditText) findViewById(R.id.editTextProducteur);
+        producteur = editTextProducteur.getText().toString();
+        return producteur;
+    }
+
+    public String getEditVariete(){
+        editTextVariete = (EditText) findViewById(R.id.editTextVariete);
+        variete = editTextVariete.getText().toString();
+        return variete;
+    }
+
+    public void testBd(){
+        vergerBdd = new BdAdapter(this);
+        Verger unVerger = new Verger(getEditNomVerger(), getEditSuperficie(),getEditHectare(), getEditVariete(), getEditCommune(), getEditProducteur());
+        vergerBdd.open();
+        vergerBdd.insererVerger(unVerger);
+        System.out.println("insertion article");
+        vergerBdd.close();
+    }
+
 }
 

@@ -19,7 +19,7 @@ public class AgrurPPE extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agrur_ppe);
         initialisations();
-        testBd();
+
     }
 
     public void initialisations() {
@@ -43,19 +43,6 @@ public class AgrurPPE extends AppCompatActivity {
 
     }
 
-    public void testBd() {
 
-        vergerBdd = new BdAdapter(this);
-
-        Verger unVerger = new Verger("kiribati", "12","15", "franck", "mayette", "toufflers");
-
-        vergerBdd.open();
-        vergerBdd.insererVerger(new Verger("kiribati", "12","15", "franck", "mayette", "toufflers"));
-        System.out.println("insertion article");
-        vergerBdd.close();
-
-
-//        Cursor c = vergerBdd.getData(); Toast.makeText(getApplicationContext(), "il y a "+String.valueOf(c.getCount())+" articles dans la BD", Toast.LENGTH_LONG).show();
-    }
 
 }

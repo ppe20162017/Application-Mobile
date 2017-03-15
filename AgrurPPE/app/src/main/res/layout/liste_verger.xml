@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+	<TextView
         android:id="@+id/textViewListeVerger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,14 +24,80 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <TextView
+        android:text="Verger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+    <TextView
+        android:text="Superificie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView15"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:text="Variete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView17"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+
+    <TextView
+        android:text="Commune"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView18"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+
+    <TextView
+        android:text="Producteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView20"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+    android:layout_toEndOf="@+id/textView19"
+    android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:text="Hectare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView16"
+        android:layout_marginStart="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listViewVergers"
+<<<<<<< HEAD
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"/>
+=======
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentStart="true" />
+>>>>>>> origin/master
 
 
 </RelativeLayout>

@@ -23,7 +23,6 @@ public class AgrurPPE extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agrur_ppe);
         initialisations();
-
     }
 
     public void initialisations() {

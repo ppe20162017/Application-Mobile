@@ -24,6 +24,7 @@ public class ListeVerger extends AppCompatActivity {
     private ListView listViewVergers;
     private BdAdapter vergerBdd;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

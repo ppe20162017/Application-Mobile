@@ -98,7 +98,7 @@
         android:layout_toStartOf="@+id/textViewAjoutVerger" />
 
     <TextView
-        android:text="Entrez le nombre d'hectare :"
+        android:text="Entrez le nombre d'arbre par hectare :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewHectare"

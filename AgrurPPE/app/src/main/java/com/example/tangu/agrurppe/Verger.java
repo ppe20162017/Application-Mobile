@@ -14,10 +14,15 @@ public class Verger {
     private String commune;
 
 
-
-
-
-
+    /**
+     * Constructeur de la classe verger
+     * @param unNom
+     * @param uneSuperficie
+     * @param unHectare
+     * @param unProducteur
+     * @param uneVariete
+     * @param uneCommune
+     */
     public Verger(String unNom, String uneSuperficie, String unHectare, String unProducteur,
                   String uneVariete, String uneCommune) {
         this.nom = unNom;
@@ -27,6 +32,11 @@ public class Verger {
         this.commune = uneCommune;
         this.variete = uneVariete;
     }
+
+    /**
+     * Les getteurs et setteur de variable de la classe Verger
+     *
+     */
 
     public int getId() {
 

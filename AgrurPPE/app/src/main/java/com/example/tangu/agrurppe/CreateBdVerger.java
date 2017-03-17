@@ -16,6 +16,10 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 public class CreateBdVerger extends SQLiteOpenHelper {
 
+    /**
+     * Déclaration des variables pour créer les colonnes de la bdd et la requête de la création de la bdd
+     */
+
     private static final String TABLE_VERGER = "table_verger";
     static final String COL_ID = "_id";
     private static final String COL_NOM = "NOM";
@@ -30,11 +34,18 @@ public class CreateBdVerger extends SQLiteOpenHelper {
             + COL_COM + " TEXT NOT NULL ," + COL_PRO + " TEXT NOT NULL);";
 
 
-
+    /**
+     * Constructeur de la création de la base de données
+     * @param context
+     * @param name
+     * @param factory
+     * @param version
+     */
     public CreateBdVerger(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
 
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -43,6 +54,12 @@ public class CreateBdVerger extends SQLiteOpenHelper {
         db.execSQL(CREATE_BDD);
     }
 
+    /**
+     * Permet de modifier la bdd on supprime la bdd puis on la recrée
+     * @param db
+     * @param oldVersion
+     * @param newVersion
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE " + TABLE_VERGER + ";");

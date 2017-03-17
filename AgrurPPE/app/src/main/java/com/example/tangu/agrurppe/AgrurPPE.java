@@ -14,9 +14,6 @@ import android.widget.Toast;
 public class AgrurPPE extends AppCompatActivity {
 
     private Button buttonAjout, buttonList;
-    private BdAdapter vergerBdd;
-    private EditText editTextNomVerger, editTextSuperficie, editTextHectare, editTextVariete, editTextProducteur, editTextCommune;
-    private String nomVerger, superficie, hectare, producteur, commune, variete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +23,9 @@ public class AgrurPPE extends AppCompatActivity {
 
     }
 
+    /**
+     * Fonction qui permet de mettre une action sur les boutons soit rediriger vers ajouter un verger soit la liste des vergers
+     */
     public void initialisations() {
         buttonAjout = (Button) findViewById(R.id.buttonAjout);
         buttonAjout.setOnClickListener(new View.OnClickListener() {
